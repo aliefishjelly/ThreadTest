@@ -22,9 +22,46 @@ Partial Class Form1
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.startBtn = New System.Windows.Forms.Button()
+        Me.cancelBtn = New System.Windows.Forms.Button()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.SuspendLayout()
+        '
+        'startBtn
+        '
+        Me.startBtn.Location = New System.Drawing.Point(26, 44)
+        Me.startBtn.Name = "startBtn"
+        Me.startBtn.Size = New System.Drawing.Size(75, 23)
+        Me.startBtn.TabIndex = 0
+        Me.startBtn.Text = "Start"
+        Me.startBtn.UseVisualStyleBackColor = True
+        '
+        'cancelBtn
+        '
+        Me.cancelBtn.Location = New System.Drawing.Point(137, 45)
+        Me.cancelBtn.Name = "cancelBtn"
+        Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
+        Me.cancelBtn.TabIndex = 1
+        Me.cancelBtn.Text = "Cancel"
+        Me.cancelBtn.UseVisualStyleBackColor = True
+        '
+        'BackgroundWorker1
+        '
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.cancelBtn)
+        Me.Controls.Add(Me.startBtn)
+        Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.ResumeLayout(False)
+
     End Sub
 
+    Friend WithEvents startBtn As Button
+    Friend WithEvents cancelBtn As Button
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class
